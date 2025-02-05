@@ -98,7 +98,7 @@ h1 {
     font-size: 14px;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy animation curve */
     position: relative;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button:first-child {
@@ -116,7 +116,7 @@ h1 {
 /* Enhanced hover effect */
 .cta-button:hover {
     transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(82, 82, 82, 0.5);
 }
 
 /* Icon animation on hover */
@@ -127,7 +127,7 @@ h1 {
 /* Active state */
 .cta-button:active {
     transform: translateY(-2px) scale(0.98);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Optional: Add subtle glow effect on hover */
@@ -138,10 +138,10 @@ h1 {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 100px;
     z-index: -1;
-    animation: glowPulse 1.5s infinite;
+    animation: glowPulse 2s infinite;
 }
 
 @keyframes glowPulse {
@@ -175,15 +175,15 @@ h1 {
 }
 
 /* Optional: Add hover effect for the resume button */
-.cta-button:first-child:hover {
+/* .cta-button:first-child:hover {
     background: #000000;
     color: white;
     border-color: #000000;
-}
+} */
 
 .hero-title {
     font-family: 'Sora', 'Avenir Next', sans-serif;
-    font-size: 48px;
+    font-size: 32px;
     line-height: 1.2;
     font-weight: 400;
     margin-bottom: 40px;
@@ -636,8 +636,8 @@ footer a {
 }
 
 .greeting {
-    font-size: 1rem;
-    margin-bottom: 2.5rem; /* Increased spacing */
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem; /* Increased spacing */
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.6s ease forwards;
