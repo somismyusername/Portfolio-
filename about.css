@@ -1,0 +1,98 @@
+/* About Me Section */
+.about-me {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+}
+
+/* Introduction */
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.intro .tagline {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Education, Experience, Achievements, Hobbies */
+.education,
+.experience,
+.achievements,
+.hobbies {
+    margin-top: 3rem;
+}
+
+.education h2,
+.experience h2,
+.achievements h2,
+.hobbies h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.education ul,
+.experience ul,
+.achievements ul,
+.hobbies ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education li,
+.experience li,
+.achievements li,
+.hobbies li {
+    margin-bottom: 2rem;
+}
+
+.education h3,
+.experience h3,
+.achievements h3,
+.hobbies h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.education .duration,
+.experience .duration,
+.achievements .year {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.education .institution,
+.experience .company {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.education .description,
+.experience .description,
+.achievements .description,
+.hobbies .description {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    line-height: 1.5;
+}
