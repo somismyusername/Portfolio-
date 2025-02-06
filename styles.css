@@ -99,7 +99,7 @@ nav {
     overflow: hidden;
     border-right: 2px solid var(--primary-color);
     white-space: nowrap;
-    animation: typing 2s steps(22, end), blink-caret 1s step-end infinite;
+    animation: typing 1.5s steps(22, end), blink-caret 1s step-end infinite;
 }
 
 @keyframes typing {
