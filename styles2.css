@@ -479,7 +479,7 @@ footer {
     margin: 4rem auto;
     padding: 0 2rem;
     color: var(--secondary-color);
-    text-align: center;
+    text-align: left;
 }
 
 footer a {
