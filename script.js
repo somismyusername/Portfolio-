@@ -124,174 +124,58 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Generate Bento Grid
-    const projects = [
-        {
-            title: "UI/UX Intern",
-            company: "American Health Care Academy",
-            image: "ahca.png",
-            link: "#",
-        },
-        {
-            title: "Brand Designer",
-            company: "Mandara Dairy",
-            image: "Mandara.png",
-            link: "#",
-        },
-        {
-            title: "Product Designer",
-            company: "Minervaa",
-            image: "minervaa.png",
-            link: "#",
-        },
-        {
-            title: "Brand Designer",
-            company: "Mandara Milk",
-            image: "soilsenses.png",
-            link: "#",
-        },
-        // Add more projects here
-    ];
+document.addEventListener('DOMContentLoaded', function () {
+    const bentoItems = document.querySelectorAll('.bento-item');
 
-    if (DOM.bentoGrid) {
-        projects.forEach((project) => {
-            const bentoItem = document.createElement('div');
-            bentoItem.classList.add('bento-item');
+    bentoItems.forEach(item => {
+        const bentoContent = item.querySelector('.bento-content');
+        const expandedView = item.querySelector('.expanded-view');
+        const backButton = item.querySelector('.back-button');
 
-            bentoItem.innerHTML = `
-                <div class="bento-content">
-                    <img src="${project.image}" alt="${project.title}">
-                    <div class="bento-info">
-                        <h3>${project.title}</h3>
-                        <p>${project.company}</p>
-                        <button class="view-project">View Project</button>
-                    </div>
-                </div>
-            `;
-
-            DOM.bentoGrid.appendChild(bentoItem);
+        // Click to expand
+        bentoContent.addEventListener('click', () => {
+            item.classList.add('expanded');
+            expandedView.style.display = 'flex';
         });
-    }
 
-    // Initialize Smooth Scroll
-    const smoothScroll = new SmoothScroll();
-
-    // Intersection Observer setup
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                state.currentSection = Array.from(DOM.sections).indexOf(entry.target);
-                smoothScroll.updateNavigation();
-            }
+        // Click to collapse
+        backButton.addEventListener('click', () => {
+            item.classList.remove('expanded');
+            expandedView.style.display = 'none';
         });
-    }, { threshold: CONFIG.threshold });
+    });
+});
+});
 
-    DOM.sections.forEach(section => observer.observe(section));
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
+    const bentoItems = document.querySelectorAll('.bento-item');
 
-    // Add styles
-    const styles = `
-        .section-navigation {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .section-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .section-dot.active {
-            background: #000;
-            transform: scale(1.5);
-        }
-        section {
-            min-height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
-        .work {
-            padding-top: 100px;
-        }
-        .work h2 {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease;
-        }
-        .work.visible h2 {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .bento-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            background: #f5f5f5;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .bento-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        .bento-content img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 12px;
-        }
-        .bento-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            border-radius: 0 0 12px 12px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        .bento-item:hover .bento-info {
-            transform: translateY(0);
-        }
-        .bento-info h3 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-        .bento-info p {
-            margin: 5px 0 0;
-            font-size: 0.9rem;
-        }
-        .bento-info .view-project {
-            margin-top: 10px;
-            padding: 8px 16px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .bento-info .view-project:hover {
-            background: #0056b3;
-        }
-    `;
+    bentoItems.forEach(item => {
+        const bentoContent = item.querySelector('.bento-content');
+        const expandedView = item.querySelector('.expanded-view');
+        const backButton = item.querySelector('.back-button');
 
-    const styleSheet = document.createElement('style');
-    styleSheet.textContent = styles;
-    document.head.appendChild(styleSheet);
+        // Click to expand
+        bentoContent.addEventListener('click', () => {
+            // Collapse all other expanded items
+            bentoItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('expanded')) {
+                    otherItem.classList.remove('expanded');
+                    otherItem.querySelector('.expanded-view').style.display = 'none';
+                }
+            });
+
+            // Expand the clicked item
+            item.classList.add('expanded');
+            expandedView.style.display = 'flex';
+        });
+
+        // Click to collapse
+        backButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent the click from bubbling up to the parent
+            item.classList.remove('expanded');
+            expandedView.style.display = 'none';
+        });
+    });
 });
