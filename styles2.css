@@ -445,7 +445,7 @@ nav {
 }
 
 .expanded-view {
-    display: none;
+    display: flex;
 }
 
 .back-button {
