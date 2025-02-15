@@ -179,3 +179,57 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const contactTrigger = document.querySelector('.contact-trigger');
+    const contactOverlay = document.querySelector('.contact-overlay');
+    const closeOverlay = document.querySelector('.close-overlay');
+
+    // Show overlay on hover
+    contactTrigger.addEventListener('mouseenter', () => {
+        gsap.to(contactOverlay, {
+            display: 'flex',
+            opacity: 1,
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+
+    // Hide overlay when mouse leaves the overlay area
+    contactOverlay.addEventListener('mouseleave', () => {
+        gsap.to(contactOverlay, {
+            opacity: 0,
+            duration: 0.3,
+            ease: 'power2.in',
+            onComplete: () => {
+                contactOverlay.style.display = 'none';
+            }
+        });
+    });
+
+    // Optional: Add a small delay before hiding to make it feel smoother
+    let timeout;
+    contactTrigger.addEventListener('mouseleave', (e) => {
+        // Check if mouse is moving towards the overlay
+        const rect = contactOverlay.getBoundingClientRect();
+        if (e.clientY > rect.top) return;
+
+        timeout = setTimeout(() => {
+            if (!contactOverlay.matches(':hover')) {
+                gsap.to(contactOverlay, {
+                    opacity: 0,
+                    duration: 0.3,
+                    ease: 'power2.in',
+                    onComplete: () => {
+                        contactOverlay.style.display = 'none';
+                    }
+                });
+            }
+        }, 100);
+    });
+
+    // Clear timeout if mouse enters overlay
+    contactOverlay.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+    });
+});

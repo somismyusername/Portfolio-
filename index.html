@@ -18,10 +18,20 @@
              <svg class="coffee-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 6.66663H15.8333C16.7174 6.66663 17.5652 7.01782 18.1904 7.64294C18.8155 8.26806 19.1667 9.1159 19.1667 9.99996C19.1667 10.884 18.8155 11.7319 18.1904 12.357C17.5652 12.9821 16.7174 13.3333 15.8333 13.3333H15" stroke="#838282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1.66663 6.66663H15V14.1666C15 15.0507 14.6488 15.8985 14.0236 16.5236C13.3985 17.1488 12.5507 17.5 11.6666 17.5H4.99996C4.1159 17.5 3.26806 17.1488 2.64294 16.5236C2.01782 15.8985 1.66663 15.0507 1.66663 14.1666V6.66663Z" stroke="#838282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path><path class="steam" d="M5 0.833374V3.33337" stroke="#838282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path><path class="steam" d="M8.33337 0.833374V3.33337" stroke="#838282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path><path class="steam" d="M11.6666 0.833374V3.33337" stroke="#838282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         </a>
         <div class="nav-links">
-            <link rel="stylesheet" href="about.html"> <a href="about.html">about</a>
+            <link rel="stylesheet" href="about.html"> <a href="about.html" target="">about</a>
             
             <a href="#work">work</a>
-            <a href="https://drive.google.com/file/d/19O6ghESj2SWKDdUfS5obsJCZUxyyByFu/view?usp=sharing" target="_blank">resume</a>
+            <a href="#" class="contact-trigger">Contact</a>
+            
+        </div>
+        <div class="contact-overlay">
+            <div class="overlay-content">
+                <h3>Contact Me</h3>
+                <ul>
+                    <li><a href="mailto:your-email@gmail.com">Gmail</a></li>
+                    <li><a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -87,123 +97,251 @@
                     </a>
                 </div>
         </section>
-    <!-- My Work Section -->
-    <section id="work" class="work-section">
-        <h2>My Work</h2>
-        <div class="bento-grid">
-            <!-- Large Box -->
-            <div class="bento-item large" data-project="1">
-                <div class="bento-content">
-                    <img src="images/project1.png" alt="Project 1">
-                    <div class="bento-info">
-                        <h3>Project Title 1</h3>
-                        <p class="description">A brief description of the project.</p>
-                    </div>
-                </div>
-                <div class="expanded-view">
-                    <h3>Project Title 1</h3>
-                    <p class="detailed-description">A detailed description of the project.</p>
-                    <div class="cta-group">
-                        <a href="#" class="cta-button">View Project</a>
-                        <a href="#" class="cta-button">Learn More</a>
-                    </div>
-                    <button class="back-button">← Back to Grid</button>
-                </div>
-            </div>
 
-            <!-- Two Small Horizontal Boxes -->
-            <div class="bento-item small" data-project="2">
-                <div class="bento-content">
-                    <img src="images/project2.png" alt="Project 2">
-                    <div class="bento-info">
-                        <h3>Project Title 2</h3>
-                        <p class="description">A brief description of the project.</p>
+        <section id="work" class="work-section">
+            <h2 class="section-title">My Work</h2>
+            
+            <div class="bento-grid">
+                <!-- AHCA Project - Large Box -->
+                <div class="bento-item large">
+                    <div class="bento-content">
+                        <img src="images/project1.png" alt="AHCA Project" class="project-image">
+                        <span class="image-tag">1.00</span>
+                        <div class="project-info">
+                            <h3>UI/UX Intern</h3>
+                            <p>American Health Care Academy</p>
+                        </div>
+                    </div>
+                    
+                    <div class="expanded-content">
+                        <button class="back-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Back
+                        </button>
+        
+                        <div class="project-carousel">
+                            <div class="carousel-container">
+                                <div class="carousel-slides">
+                                    <img src="images/project2.png" alt="AHCA Design">
+                                    <img src="images/project2.png" alt="AHCA Research">
+                                </div>
+                                <div class="carousel-nav">
+                                    <button class="prev">←</button>
+                                    <button class="next">→</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="project-details">
+                            <h2>Healthcare Platform Redesign</h2>
+                            <p class="project-description">Led the redesign of AHCA's healthcare platform...</p>
+                            
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="number">45%</span>
+                                    <span class="label">Increased Engagement</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="number">30%</span>
+                                    <span class="label">Conversion Rate</span>
+                                </div>
+                            </div>
+        
+                            <div class="project-tools">
+                                <span class="tool">Figma</span>
+                                <span class="tool">Adobe XD</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="expanded-view">
-                    <h3>Project Title 2</h3>
-                    <p class="detailed-description">A detailed description of the project.</p>
-                    <div class="cta-group">
-                        <a href="#" class="cta-button">View Project</a>
-                        <a href="#" class="cta-button">Learn More</a>
+        
+                <!-- Mandara Dairy - Small Box -->
+                <div class="bento-item small">
+                    <div class="bento-content">
+                        <img src="images/project2.png" alt="Mandara Project" class="project-image">
+                        <span class="image-tag">1.00</span>
+                        <div class="project-info">
+                            <h3>Brand Designer</h3>
+                            <p>Mandara Dairy</p>
+                        </div>
                     </div>
-                    <button class="back-button">← Back to Grid</button>
+                    
+                    <div class="expanded-content">
+                        <button class="back-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Back
+                        </button>
+        
+                        <div class="project-carousel">
+                            <div class="carousel-container">
+                                <div class="carousel-slides">
+                                    <img src="images/project2.png" alt="Mandara Design">
+                                    <img src="images/project2.png" alt="Mandara Branding">
+                                </div>
+                                <div class="carousel-nav">
+                                    <button class="prev">←</button>
+                                    <button class="next">→</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="project-details">
+                            <h2>Mandara Dairy Branding</h2>
+                            <p class="project-description">Created comprehensive brand identity...</p>
+                            
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="number">80%</span>
+                                    <span class="label">Brand Recognition</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="number">40%</span>
+                                    <span class="label">Market Growth</span>
+                                </div>
+                            </div>
+        
+                            <div class="project-tools">
+                                <span class="tool">Illustrator</span>
+                                <span class="tool">Photoshop</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="bento-item small" data-project="3">
-                <div class="bento-content">
-                    <img src="images/project3.png" alt="Project 3">
-                    <div class="bento-info">
-                        <h3>Project Title 3</h3>
-                        <p class="description">A brief description of the project.</p>
+                <div class="bento-item small">
+                    <div class="bento-content">
+                        <img src="images/project1.png" alt="Mandara Project" class="project-image">
+                        <span class="image-tag">1.00</span>
+                        <div class="project-info">
+                            <h3>Brand Designer</h3>
+                            <p>Mandara Dairy</p>
+                        </div>
+                    </div>
+                    
+                    <div class="expanded-content">
+                        <button class="back-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Back
+                        </button>
+        
+                        <div class="project-carousel">
+                            <div class="carousel-container">
+                                <div class="carousel-slides">
+                                    <img src="mandara-1.jpg" alt="Mandara Design">
+                                    <img src="mandara-2.jpg" alt="Mandara Branding">
+                                </div>
+                                <div class="carousel-nav">
+                                    <button class="prev">←</button>
+                                    <button class="next">→</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="project-details">
+                            <h2>Mandara Dairy Branding</h2>
+                            <p class="project-description">Created comprehensive brand identity...</p>
+                            
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="number">80%</span>
+                                    <span class="label">Brand Recognition</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="number">40%</span>
+                                    <span class="label">Market Growth</span>
+                                </div>
+                            </div>
+        
+                            <div class="project-tools">
+                                <span class="tool">Illustrator</span>
+                                <span class="tool">Photoshop</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="expanded-view">
-                    <h3>Project Title 3</h3>
-                    <p class="detailed-description">A detailed description of the project.</p>
-                    <div class="cta-group">
-                        <a href="#" class="cta-button">View Project</a>
-                        <a href="#" class="cta-button">Learn More</a>
-                    </div>
-                    <button class="back-button">← Back to Grid</button>
-                </div>
+        
+                          <!-- AHCA Project - Large Box -->
+                          <div class="bento-item large">
+                            <div class="bento-content">
+                                <img src="images/project2.png" alt="AHCA Project" class="project-image">
+                                <span class="image-tag">1.00</span>
+                                <div class="project-info">
+                                    <h3>UI/UX Intern</h3>
+                                    <p>American Health Care Academy</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expanded-content">
+                                <button class="back-button">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Back
+                                </button>
+                
+                                <div class="project-carousel">
+                                    <div class="carousel-container">
+                                        <div class="carousel-slides">
+                                            <img src="ahca-1.jpg" alt="AHCA Design">
+                                            <img src="ahca-2.jpg" alt="AHCA Research">
+                                        </div>
+                                        <div class="carousel-nav">
+                                            <button class="prev">←</button>
+                                            <button class="next">→</button>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="project-details">
+                                    <h2>Healthcare Platform Redesign</h2>
+                                    <p class="project-description">Led the redesign of AHCA's healthcare platform...</p>
+                                    
+                                    <div class="project-metrics">
+                                        <div class="metric">
+                                            <span class="number">45%</span>
+                                            <span class="label">Increased Engagement</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="number">30%</span>
+                                            <span class="label">Conversion Rate</span>
+                                        </div>
+                                    </div>
+                
+                                    <div class="project-tools">
+                                        <span class="tool">Figma</span>
+                                        <span class="tool">Adobe XD</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                <!-- Continue this pattern for other boxes -->
+                <!-- Each box should have:
+                     1. bento-content with image and info
+                     2. expanded-content with:
+                        - back button
+                        - carousel
+                        - project details
+                        - metrics
+                        - tools -->
             </div>
-
-            <!-- Second Large Box -->
-            <div class="bento-item large" data-project="4">
-                <div class="bento-content">
-                    <img src="images/project3.png" alt="Project 4">
-                    <div class="bento-info">
-                        <h3>Project Title 4</h3>
-                        <p class="description">A brief description of the project.</p>
-                    </div>
-                </div>
-                <div class="expanded-view">
-                    <h3>Project Title 4</h3>
-                    <p class="detailed-description">A detailed description of the project.</p>
-                    <div class="cta-group">
-                        <a href="#" class="cta-button">View Project</a>
-                        <a href="#" class="cta-button">Learn More</a>
-                    </div>
-                    <button class="back-button">← Back to Grid</button>
-                </div>
-            </div>
-
-            <!-- Vertical Box -->
-            <div class="bento-item vertical" data-project="5">
-                <div class="bento-content">
-                    <img src="images/project1.png" alt="Project 5">
-                    <div class="bento-info">
-                        <h3>Project Title 5</h3>
-                        <p class="description">A brief description of the project.</p>
-                    </div>
-                </div>
-                <div class="expanded-view">
-                    <h3>Project Title 5</h3>
-                    <p class="detailed-description">A detailed description of the project.</p>
-                    <div class="cta-group">
-                        <a href="#" class="cta-button">View Project</a>
-                        <a href="#" class="cta-button">Learn More</a>
-                    </div>
-                    <button class="back-button">← Back to Grid</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
 
     <footer>
         <p id="fot">Somashekhar • 2025</p>
         <p>I'm always up for a chat </p>
         <p>Get in touch directly at <a href="mailto:somashekharrgb@gmail.com">somashekharrgb@gmail.com</a></p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <!-- Initialize AOS -->
-    <script>
-      AOS.init();
-    </script>
+    <!-- Add these before closing body tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 
 </body>
